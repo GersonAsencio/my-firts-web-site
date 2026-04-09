@@ -1,47 +1,90 @@
-<!DOCTYPE html> <!-- Indica que tipo de documento estamos usando-->
-<html lang="en"> <!--Contenedor de toda la página | lang = lenguaje de la página-->
-<head> <!--Información interna de tu web-->
-    <meta charset="UTF-8"> <!-- meta = metadato | charset puedes escoger el tipo de escritura (UTF-8 muestra la ñ y simbolos)-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta tu web a celulares (responsive)-->
-    <meta name="description" content="Los mejores especialistas a tu alcance,  agenta tu cita presencial o virtual">
-    <meta rel="stylesheet" href="estilos.css"> <!--Conectar el HTML con el contenido | rel = relation | href = la ruta donde está el archivo-->
-    <title>CLinica Iberoamericana | Atención profesional</title> <!-- Permite agregar un titulo que aparece en la pestaña del navegador-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Mi web</title>
 </head>
+
 <body>
-    <!-- Etiquetas semánticas-->
-    <header></header> <!-- Ubicar el encabezado a tu web | logos - menús - navbar-->
-    <nav></nav> <!-- Menú de navegación -->
-    <main></main> <!-- Almacena el contenido principal de la pagina -->
-    <section></section> <!-- Divide el contenido en bloques -->
-    <div></div> <!--contenedor versatil dependiendo de los estilos configurados -->
-    <footer></footer> <!-- Parte  final de la pagina-->
+    <header>
+        <h1>Mi primera página web</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#Contenido">Contenido</a>
+            <a href="#informacion">Información</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Innicio -->
+        <section class="inicio">
+            <h2>Bienvenidos a mi primer web site</h2>
+            <p>Bienvenidos a este espacio dedicado a conocer las instituciones que garantizan la libertad y seguridad del Perú. Aquí exploramos la misión, valores y el compromiso estratégico de nuestras fuerzas armadas en la protección de nuestra soberanía nacional.
+            <button>Lorem</button>
+        </section>
 
-    <!-- Etiquetas para texto y contenido -->
-     <h1></h1> <!-- Titulos -->
-     <p></p> <!-- Parrafos -->
-     <strong></strong> <!-- Tecto en negritas -->
-     <em></em> <!-- Texto con énfasis -->
-
-     <!-- Orden y listas-->
-    <ul> <!-- Lista sin orden -->
-        <li>Pera</li> <!-- Elemento de la lista -->
-        <li> Manzana</li> 
-        <li> Platano</li>
-    </ul>
-    <ol> <!-- Lista ordenada-->   
-        <li>Pera</li> 
-        <li> Manzana</li> 
-        <li> Platano</li>
-    </ol>
-
-    <!-- imagenes y enlaces -->
-     <img> <!-- Importar imagenes -->
-     <a></a> <!-- Crear enlaces-->
-
-    <!-- Formularios-->
-    <form> <!-- Agrupar campos de entrada -->
-        <label></label> <!-- tecto de acompañamiento al input -->
-        <input> <!-- campo donde el usuario ingresa datos -->
-        <button></button> <!-- boton de acción -->
+        <!-- Contenido -->
+        <section class="main-contenido">
+            <h2>Mis habilidades</h2>
+            <div class="contenedor-cards">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/img-ejemplo.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">FUERZAS ARMADAS DEL PERÚ</h5>
+                        <p class="card-text">Las Fuerzas Armadas del Perú (FF. AA.) son la institución nacional encargada de defender la independencia, soberanía e integridad territorial del país.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/fuerza-aerea.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">FUERZA AEREA DEL PERÚ</h5>
+                        <p class="card-text">La Fuerza Aérea del Perú (FAP) es la institución militar, dependiente del Ministerio de Defensa, encargada de la defensa del espacio aéreo, soberanía nacional y apoyo en desastres, operando con diversas alas y grupos aéreos.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/Marina.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MARINA DE GUERRA DEL PERÚ</h5>
+                        <p class="card-text">La Marina de Guerra del Perú (MGP) es una de las instituciones de las Fuerzas Armadas, dependiente del Ministerio de Defensa, encargada de la defensa nacional en el ámbito marítimo, fluvial y lacustre.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+        
+        <!-- Información -->
+        <div class="container-md">
+            <h2>Información</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombres: </label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email: </label>
+                    <input type="email" class="form-control">
+                </div>
+ 
+                <div class="mb-3">
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+               
+                <button type="button" class="btn btn-warning">Enviar</button>
+            </form>
+        </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 Mi primera web. Senati</p>
+            <p>Contacto: Gersonar18@gmail.com</p>
+            <p>Número de contacto: 982497198</p>
+        </footer>   
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
